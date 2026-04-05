@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Моей любимой колдунье | С днём рождения</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Аудио плеер с песней SUNO -->
+    <div class="music-player">
+        <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+        <span class="track-title">🎵 Моя песня для тебя | Suno AI</span>
+        <audio id="loveSong" src="D:\SiteForDi\images\two aries, one fire.mp3" preload="auto"></audio>
+        <small style="color:#5e3a1f;"><i class="fas fa-magic"></i> включи, пока читаешь</small>
+    </div>
+
+    <!-- Приветствие и магическая атмосфера -->
+    <div style="text-align: center; margin-bottom: 1rem;">
+        <h1 style="font-size: 3rem; color: #6a3e1f;">✨ Моя колдунья ✨</h1>
+        <p style="font-size: 1.3rem;">С днём рождения, моя волшебница</p>
+    </div>
+
+    <!-- История и фото в стиле Polaroid с разными углами -->
+    <h2>📖 Наша история</h2>
+    <div class="story-grid">
+        <div class="story-item">
+            <div class="polaroid rotate-left">
+                <img src="D:\SiteForDi\images\IMG_20260404_020324.jpg" alt="Наша первая встреча">
+                <div class="caption">✨ Первая магия ✨</div>
+            </div>
+            <p style="margin-top: 1rem; max-width: 260px; text-align: center;">Фата, листва, наши счастливые глаза. Вот она — самая чистая магия.</p>
+        </div>
+        <div class="story-item">
+            <div class="polaroid rotate-right">
+                <img src="D:\SiteForDi\images\IMG_20260404_021521.jpg" alt="Наше приключение">
+                <div class="caption">🌙 Лунный ритуал 🌙</div>
+            </div>
+            <p style="margin-top: 1rem; max-width: 260px; text-align: center;">Тот вечер, когда ты научила меня видеть звёзды иначе. Навсегда в сердце.</p>
+        </div>
+        <div class="story-item">
+            <div class="polaroid rotate-mid">
+                <img src="D:\SiteForDi\images\IMG_20260404_015930.jpg" alt="Смех и любовь">
+                <div class="caption">🍂 Уютный закат 🍂</div>
+            </div>
+            <p style="margin-top: 1rem; max-width: 260px; text-align: center;">Глаза цвета леса, шёпот счастья — и мир вокруг оживает.</p>
+        </div>
+    </div>
+
+    <!-- ПРИЗНАНИЕ В ЛЮБВИ + история в тексте -->
+    <div class="love-letter">
+        <p>Моя любимая, самая таинственная и нежная колдунья... С того самого дня, как ты перевернула мою реальность, я живу в твоём волшебстве. Ты умеешь зажигать свет там, где тьма, и превращать обычный день в праздник. Спасибо за твои зелья (самый вкусный чай в мире), за шёпот на ухо, за то, как смеёшься, когда я делаю что-то нелепое. ❤️</p>
+        <p>С каждым днём я люблю тебя сильнее — это моя самая сильная магия. Ты — целая вселенная. Обещаю всегда быть рядом, поддерживать твои ритуалы, радовать и любить так, как ты заслуживаешь.</p>
+        <div class="signature">Твой преданный маг,<br> Эрик</div>
+    </div>
+
+    <!-- Дополнительные фото с местами, где можно добавить истории -->
+    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button class="btn-gallery btn-confession" id="openConfessionBtn"><i class="fas fa-heart"></i> 💌 Наши признания</button>
+        <button class="btn-gallery" id="openGalleryBtn"><i class="fas fa-images"></i> 📸 Галерея воспоминаний</button>
+    </div>
+
+    <!-- ЗАГАДКА ДЛЯ КОЛДУНЬИ -->
+    <div class="riddle-card" id="riddleCard">
+        <div class="riddle-question">
+            🔮 <i class="fas fa-hat-wizard"></i> Загадка от сердца 🔮
+        </div>
+        <p style="margin-top: 0.8rem;">"Что не имеет ключа, но открывает душу? Что растёт от каждого взгляда и не боится ни одного заклинания?"</p>
+        <div id="riddleAnswer" class="riddle-answer">
+            ❤️ Наша любовь ❤️ (и, конечно, твой смех)
+        </div>
+        <p style="margin-top: 12px; font-size: 0.9rem;">✨ кликни, чтобы увидеть ответ ✨</p>
+    </div>
+
+    <footer>
+        <i class="fas fa-moon"></i> Для моей волшебницы. Твой свет освещает мой путь.
+    </footer>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО ГАЛЕРЕИ (сетка фото) -->
+<div id="galleryModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeModalBtn">&times;</span>
+        <h2 style="margin-bottom: 1rem;">💫 Наши мгновения</h2>
+        <div id="galleryList" class="gallery-grid">
+            <!-- Сюда будут подгружаться фото из JavaScript -->
+        </div>
+        <p style="text-align: center; margin-top: 1rem;"><i class="fas fa-heart" style="color:#b5542a;"></i> нажми на фото, чтобы открыть историю</p>
+    </div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО ДЛЯ ПРОСМОТРА ФОТО С ИСТОРИЕЙ -->
+<div id="photoModal" class="photo-modal">
+    <div class="photo-modal-content">
+        <span class="close-photo-modal">&times;</span>
+        <div class="photo-modal-inner">
+            <div id="modalMediaContainer" style="width:100%; max-height:60vh; display:flex; justify-content:center; align-items:center; overflow:hidden; border-radius:16px; background:#000;">
+                <!-- Сюда будет подставляться фото или видео -->
+            </div>
+            <div class="photo-modal-caption">
+                <h3 id="modalPhotoTitle"></h3>
+                <p id="modalPhotoStory"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО ДЛЯ ПРИЗНАНИЙ (ПОЛАРОИД) -->
+<div id="confessionModal" class="modal">
+    <div class="modal-content" style="max-width: 500px;">
+        <span class="close-modal" id="closeConfessionBtn">&times;</span>
+        <div style="text-align: center;">
+            <div class="polaroid-confession" style="background: #fffcf8; padding: 20px 20px 30px 20px; box-shadow: 8px 12px 24px rgba(0,0,0,0.15); display: inline-block; border-radius: 4px; transform: rotate(1deg);">
+                <img id="confessionImage" src="images/confession.png" alt="Наши признания" style="width: 100%; max-width: 380px; height: auto; border-radius: 2px; display: block;">
+                <div class="caption" style="margin-top: 16px; font-style: italic; font-size: 0.95rem; color: #6f4e2e;">
+                    📸 Наши слова любви • навсегда
+                </div>
+            </div>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #7a684e;">
+                <i class="fas fa-magic"></i> Каждое слово — от сердца
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
